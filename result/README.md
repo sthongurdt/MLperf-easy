@@ -25,3 +25,4 @@ We are going to use the file2csv.sh script to convert the files to CSV. This scr
 cd onnx/
 find . -maxdepth 1 -name "1885*" -print0 | xargs -0 -n 1 bash -c '../file2csv.sh "$0"'
 ```
+Repeat for `tf`, finally use the notebook `png_gen.ipynb` to graph the data and save the graphs.
