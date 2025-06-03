@@ -50,8 +50,9 @@ pip install boto3 tqdm opencv-python
 ```
 - Other datasets
 ```
-#./openimages_mlperf -d <DOWNLOAD_PATH>  -m <MAX_IMAGES>
-#./openimages_calibration_mlperf -d <DOWNLOAD_PATH>
+./openimages_mlperf -d <DOWNLOAD_PATH>  -m <MAX_IMAGES>
+./openimages_calibration_mlperf -d <DOWNLOAD_PATH>
+Example:
 ./openimages_mlperf.sh -d ../../../../data/openimages -m 100
 ./openimages_calibration_mlperf.sh -d ../../../../data/openimages
 ```
