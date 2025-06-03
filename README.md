@@ -5,7 +5,7 @@ MLperf has a comprehensive testbed for various models and frameworks. This recip
 
 The first thing to do is clone the MLperf inference repo.
 ```
-mkdir mlcommons && cd mlcommons/
+mkdir mlperf && cd mlperf/
 git clone --recurse-submodules https://github.com/mlcommons/inference.git --depth 1
 ```
 
