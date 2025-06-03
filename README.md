@@ -13,11 +13,42 @@ Create the directory for the models.
 ```
 mkdir models && cd models/
 mkdir tf onnx
+```
+
+Change to the directory for TensorFlow models and download the models
+```
 cd tf/
 wget -q https://zenodo.org/record/2535873/files/resnet50_v1.pb
-wget -q https://zenodo.org/record/2269307/files/mobilenet_v1_1.0_224.tgz # descomprimir
+wget -q https://zenodo.org/record/2269307/files/mobilenet_v1_1.0_224.tgz # decompress
+```
+
+Change to the directory for the Onnxruntime models and download the models
+```
 cd ../onnx
 wget -q https://zenodo.org/record/4735647/files/resnet50_v1.onnx
 wget -q https://zenodo.org/record/4735651/files/mobilenet_v1_1.0_224.onnx
 ```
 
+Create the directory for the datasets
+```
+cd ../.. && mkdir data/
+```
+
+Move to the tools directory to download the datasets and download the dataset you need
+```
+cd ~/mlperf/inference/vision/classification_and_detection/tools/
+
+```
+
+You can download different types of datasets:
+```
+pip install boto3 tqdm opencv-python
+```
+- Fake dataset
+```
+./make_fake_imagenet.sh && mv fake_imagenet/ ../../../../data/
+```
+- Other datasets
+```
+
+```
