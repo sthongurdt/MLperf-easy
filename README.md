@@ -36,7 +36,7 @@ cd ../.. && mkdir data/
 
 Move to the tools directory to download the datasets and download the dataset you need
 ```
-cd ~/mlperf/inference/vision/classification_and_detection/tools/
+cd ../inference/vision/classification_and_detection/tools/
 
 ```
 
@@ -50,5 +50,35 @@ pip install boto3 tqdm opencv-python
 ```
 - Other datasets
 ```
-
+#./openimages_mlperf -d <DOWNLOAD_PATH>  -m <MAX_IMAGES>
+#./openimages_calibration_mlperf -d <DOWNLOAD_PATH>
+./openimages_mlperf.sh -d ../../../../data/openimages -m 100
+./openimages_calibration_mlperf.sh -d ../../../../data/openimages
 ```
+
+Declare the variables to build the image
+```
+cd ..
+```
+- If you are using the TensorFlow framework
+```
+export MODEL_DIR=../../../models/tf
+```
+- If you are using the Onnxruntime framework
+```
+export MODEL_DIR=../../../models/onnx
+```
+- If you are using the dataset_fake
+```
+export MODEL_DIR=../../../data/fake_imagenet/
+```
+- If you are using other dataset
+```
+export MODEL_DIR=<DOWNLOAD_PATH>
+```
+
+Test
+```
+./run_and_time.sh onnxruntime mobilenet cpu --accuracy
+```
+
