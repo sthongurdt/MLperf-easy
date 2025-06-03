@@ -10,16 +10,14 @@ git clone --recurse-submodules https://github.com/mlcommons/inference.git --dept
 ```
 
 Create the directory for the models.
-<code>mkdir models && cd models/</code>
-<code>mkdir tf onnx</code>
-<code>cd tf/</code>
-<code>wget -q https://zenodo.org/record/2535873/files/resnet50_v1.pb</code
-<code>wget -q https://zenodo.org/record/2269307/files/mobilenet_v1_1.0_224.tgz # descomprimir</code>
+```
+mkdir models && cd models/
+mkdir tf onnx
+cd tf/
+wget -q https://zenodo.org/record/2535873/files/resnet50_v1.pb
+wget -q https://zenodo.org/record/2269307/files/mobilenet_v1_1.0_224.tgz # descomprimir
+cd ../onnx
+wget -q https://zenodo.org/record/4735647/files/resnet50_v1.onnx
+wget -q https://zenodo.org/record/4735651/files/mobilenet_v1_1.0_224.onnx
+```
 
-
-
-
-
-
-
-<code></code>
