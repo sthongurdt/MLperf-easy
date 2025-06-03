@@ -82,3 +82,4 @@ Test
 ./run_and_time.sh onnxruntime mobilenet cpu --accuracy
 ```
 
+The test execution is almost certain to fail, modify the run_and_time.sh file as it is in the repo archive.
